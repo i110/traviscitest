@@ -38,10 +38,7 @@ script:
   # - brew update
   # - brew install --quiet openssl
   # - sudo find /usr/ -name "*libssl*" | xargs otool -L
-  - |
-    fuck
-    echo "success"
-  - echo "next"
+  - find /usr/ -name "libz*"
 
 addons:
   hosts:
