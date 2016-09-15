@@ -22,12 +22,13 @@
 #   - curl -L https://curl.haxx.se/download/curl-7.50.0.tar.gz | tar xzf -
 #   - (cd curl-7.50.0 && ./configure --prefix=/usr --with-nghttp2 --disable-shared && make && sudo make install)
 
-install:
-  - sudo apt-get install dnsutils
+# install:
+#   - sudo apt-get install dnsutils
 
 script:
   # - curl --version
-  - nslookup 127.0.0.1.xip.io
+  # - nslookup 127.0.0.1.xip.io
+  - find /usr/lib/libz* | xargs otool -L
 
 addons:
   hosts:
