@@ -38,7 +38,7 @@ script:
   # - brew update
   # - brew install --quiet openssl
   # - sudo find /usr/ -name "*libssl*" | xargs otool -L
-  - find /usr/lib/ -name "libz*" | otool -L
+  - find /usr/lib/ -name "libz*" | xargs otool -L
   - |
     export INSTALL_DIR=${HOME}/local
     mkdir ${INSTALL_DIR}
