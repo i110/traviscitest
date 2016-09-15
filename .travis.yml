@@ -32,7 +32,7 @@ compiler: clang
 script:
   # - curl --version
   # - nslookup 127.0.0.1.xip.io
-  - find /usr/lib/libz* | xargs otool -L
+  - sudo find /usr/lib/libz* | xargs otool -L
 
 addons:
   hosts:
