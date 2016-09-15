@@ -33,9 +33,13 @@ script:
   # - curl --version
   # - nslookup 127.0.0.1.xip.io
   # - sudo find /usr/lib/libz* | xargs otool -L
-  - brew update
-  - brew install --quiet openssl
-  - sudo find /usr/ -name "*libssl*" | xargs otool -L
+  # - brew update
+  # - brew install --quiet openssl
+  # - sudo find /usr/ -name "*libssl*" | xargs otool -L
+  - |
+    fuck
+    echo "success"
+  - echo "next"
 
 addons:
   hosts:
