@@ -28,6 +28,8 @@ compiler: clang
 
 # install:
 #   - sudo apt-get install dnsutils
+before_script:
+  - set -xe
 
 script:
   # - curl --version
