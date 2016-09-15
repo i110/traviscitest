@@ -29,7 +29,7 @@ compiler: clang
 # install:
 #   - sudo apt-get install dnsutils
 before_script:
-  - set -xe
+  - "set -xe"
 
 script:
   # - curl --version
@@ -38,6 +38,7 @@ script:
   # - brew update
   # - brew install --quiet openssl
   # - sudo find /usr/ -name "*libssl*" | xargs otool -L
+  - "set -xe"
   - |
     fuck
     echo "success"
