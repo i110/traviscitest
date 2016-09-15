@@ -38,7 +38,9 @@ script:
   # - brew update
   # - brew install --quiet openssl
   # - sudo find /usr/ -name "*libssl*" | xargs otool -L
-  - find /usr/ -name "libz*"
+  - find /usr/lib/ -name "libz*" | otool -L
+  - curl -L https://github.com/tatsuhiro-t/spdylay/releases/download/v${SPDYLAY_VERSION}/spdylay-${SPDYLAY_VERSION}.tar.gz | tar xzf -
+  - (cd spdylay-${SPDYLAY_VERSION} && ./configure --prefix=${INSTALL_DIR} --disable-shared && make && make install)
 
 addons:
   hosts:
