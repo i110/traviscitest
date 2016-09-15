@@ -32,7 +32,10 @@ compiler: clang
 script:
   # - curl --version
   # - nslookup 127.0.0.1.xip.io
-  - sudo find /usr/lib/libz* | xargs otool -L
+  # - sudo find /usr/lib/libz* | xargs otool -L
+  - brew update
+  - brew install --quiet openssl
+  - sudo find /usr/ -name "*openssl*"
 
 addons:
   hosts:
