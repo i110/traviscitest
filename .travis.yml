@@ -44,8 +44,8 @@ script:
   - export PKG_CONFIG_PATH=${INSTALL_DIR}/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig
   - |
     brew update
-    brew install --quiet libuv
-    brew link libuv
+    # brew install --quiet libuv
+    # brew link libuv
     # brew install --quiet libev
   - |
     export INSTALL_DIR=${HOME}/local
