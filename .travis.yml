@@ -46,7 +46,7 @@ script:
     brew update
     brew install --quiet libuv
     brew link libuv
-    brew install --quiet libev
+    # brew install --quiet libev
   - |
     export INSTALL_DIR=${HOME}/local
     mkdir ${INSTALL_DIR}
